@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif
+}
+body{
+    display:flex;
+    background: black;
+    align-items: center;
+    justify-content: left;
+    min-height: 100vh
+}
+
+.container{
+    position: relative;
+}
+
+.card{
+    position: relative;
+    background: grey;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    
+}
+
+.card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background:lime;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out
+}
+.card:hover:before{
+    clip-path: circle(270px at 80% -20%);
+}
+
+.card:after{
+    content: 'Apple';
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    font-size: 7em;
+    font-weight: 900;
+    font-style: italic;
+    color:black;
+    opacity: 0.1;
+}
+
+.imagebx{
+    position: absolute;
+    top:20%;
+    transform: translateY(-20%);
+    left:25%;
+    z-index: 100;
+    transform: rotate(20deg);
+    transition: 0.5s;
+}
+
+.card:hover .imagebx{
+    top: 2%;
+    transform: translateY(0%)
+}
+
+.imagebx img{
+    height: 150px;
+}
+
+.contentbx{
+    position: absolute;
+    bottom: 1%;
+    left: 20%;
+    height: 60px;
+    color: black;
+    align-content: center;
+    justify-content: center;
+    z-index: 50;
+    text-align: center;
+    transition: 1s ease-in-out;
+}
+
+.card:hover .contentbx{
+    height: 160px;
+}
+
+.color{
+    display: inline-block;
+}
