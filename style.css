@@ -6,9 +6,9 @@ body{
 
 .grid-container{
     display:grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: auto auto auto auto auto auto;
     padding: 10px;
-    grid-gap: 7px;
+    grid-gap:7px;
 }
 
 .grid-item{
